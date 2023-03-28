@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    height:100%;
+    background-color: rgb(172, 214, 214);
+}
+
+.center{
+    display: flex;
+    width:100%;
+
+}
+
+
+header{
+    width: 100%;
+    min-height: 35px;
+    background-color: rgb(136, 201, 201);
+}
+
+
+.logo{
+    width:50%;
+    text-align:left;
+    padding:10px 120px;
+    font-size:30px;
+}
+.login_aluno{
+    width:50%;
+    text-align:right;
+    padding:19px 70px 10px 70px;
+}
+.login_aluno input[type=email],
+.login_aluno input[type=password]{
+    padding-left:9px;
+    border-radius:20px;
+    height:40px;
+
+}
+.login_aluno input[type=submit]{
+    padding:9px 12px;
+    border-radius:20px;
+    border:0;
+
+}
+
+
+section.cadastro_aluno .center{
+    align-items:center;
+    justify-content:center;
+}
+section.cadastro_aluno .center form{
+    margin-top:80px;
+    width:100%;
+    max-width:700px;
+    padding:70px;
+    border-radius:40px;
+    background-color: rgb(147, 189, 189);
+}
+section.cadastro_aluno .center form input[type=text],
+section.cadastro_aluno .center form input[type=password],
+section.cadastro_aluno .center form input[type=number],
+section.cadastro_aluno .center form input[type=email]{
+    width:100%;
+    padding-left:9px;
+    border-radius:20px;
+    height:40px;
+    margin-bottom:14px;
+}
+section.cadastro_aluno .center form input[type=submit]{
+    padding:8px 12px;
+    border-radius:30px;
+    display:block;
+    margin:0 auto;
+    border:0;
+}
+
+.painel{
+    width:100%;
+
+}
+.painel .center{
+    align-items:center;
+    
+}
+.painel .center .dados_aluno{
+    width:80%;
+    padding:30px 50px;
+    border-radius:34px;
+    margin:0 auto;
+    background-color: aquamarine;
+    margin-top:20px;
+    display: flex;
+    align-items:center;
+}
+.painel .center .dados_aluno ul{
+    width:100%;
+    text-align:center;
+}
+.painel .center .dados_aluno ul li{
+    display: inline-block;
+    border-radius:20px;
+    background-color: rgb(109, 202, 171);
+    padding:13px 20px
+}

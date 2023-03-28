@@ -1,0 +1,13 @@
+<?php 
+    $cliente = \Mysql::connect()->prepare("SELECT * FROM `clientes` WHERE id=?");
+    $cliente->execute(array((int)$id));
+    $cliente = $cliente->fetch();
+?>
+
+<h4><a href="<?php echo BASE; ?>"> < Clientes</a></h4>
+<br>
+<br>
+<br>
+<h2>Visualizando Cliente:<?php echo $cliente['nome'] ?></h2>
+<h3>E-Mail:<?php echo $cliente['email']; ?></h3>
+

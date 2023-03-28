@@ -1,0 +1,38 @@
+<h2>Lista de Clientes</h2>
+
+<ul>
+	<?php
+		$sql = \Mysql::connect()->prepare("SELECT * FROM `clientes`");
+		$sql->execute();
+		$listaClientes = $sql->fetchAll();
+		foreach($listaClientes as $key => $value){
+	?>
+		<li><a href="<?php echo BASE; ?>clientes/<?php echo $value['id']; ?>"><?php echo $value['nome']; ?></a></li>
+	<?php } ?>
+</ul>
+<br>
+<br>
+<br>
+<h2>Cadastrar Novo Cliente:</h2>
+<form method="POST">
+	<input type="text" name="nome" placeholder="Digite seu nome..."/>
+	<input type="email" name="email" placeholder="Digite seu nome..."/>
+	<input type="submit" value="Cadastrar!"/>
+</form>
+
+<?php
+	if(isset($info)){
+		if($info['nome'] == '' || $info['email'] == '')
+			echo '<script>alert("Campos Vázios não são permitidos!");location.href = "'.BASE.'"</script>';
+
+		$nome = $info['nome'];
+		$email = $info['email'];
+		$sql = \Mysql::connect()->prepare("INSERT INTO `clientes` VALUES (null,?,?)");
+		if($sql->execute(array($nome,$email))){
+			echo '<script>alert("Cadastrado realizado com sucesso!");location.href="'.BASE.'"</script>';
+		}else{
+			echo '<script>alert("Ocorreu um erro no servidor...Por favor reporte!");location.href="'.BASE.'"</script>';
+		}
+	}
+?>
+

@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+}
+
+.center{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 2%;
+    position:relative;
+    z-index:3;
+}
+
+.clear{
+    clear:both;
+}
+
+header{
+    background:#e94818;
+    padding:10px 2%;
+}
+.quadrado{
+    width:60px;
+    height:60px;
+    background-color: #e48e74;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.logo{
+    float:left;
+    color:#dfb5a9;
+}
+nav.menu{
+    float:right;
+    margin-top:4px;
+}
+nav.menu a{
+    margin:8px 9px 0 9px;
+    color:#dfb5a9;
+    text-decoration:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    background: #201512;
+}
+nav.menu a:hover{
+    text-decoration:underline;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.3);
+}
+
+.chamada{
+    position:relative;
+    width:100%;
+    background-image:url('../images/paisagem.jpeg');
+    background-size:cover;
+    background-position:center;
+    height:100%;
+    max-height:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chamada h2{
+    color:#ff3d00;
+    font-size:185px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.home{
+    text-align:center;
+    padding-top:70px;
+    background-image:url('../images/praias-rj.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.sobre{
+    position:relative;
+    width:100%;
+    background-image:url('../images/praias-2.jpg');
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding-top:40px;
+}
+.home h2,.sobre h2{
+    font-size:55px;
+    margin-bottom:24px;
+    color:#ff3d00;
+    font-family: 'Bebas Neue', cursive;
+}
+.home p,.sobre p{
+    font-size:20px;
+    line-height:50px;
+    color:#e48e74;
+    padding-bottom:33px;
+    font-weight:800;
+    font-family: 'Bebas Neue', cursive;
+}
+
+div.contato{
+    width:100%;
+    background-image:url('../images/prais-2.png');
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding:80px 0;
+    position:relative;
+}
+div.contato form{
+    width:100%;
+    max-width:600px;
+    display: inline-block;
+    padding:50px 0;
+    position:relative;
+    z-index:4;
+    
+}
+div.contato form input[type=text]{
+    width:100%;
+    height:40px;
+    padding-left:9px;
+    margin-bottom:20px;
+    background:#ffe1d8;
+    border:0;
+}
+div.contato form textarea{
+    width:100%;
+    height:200px;
+    padding:13px;
+    background:#ffdacf;
+}
+div.contato form input[type=submit]{
+    padding:8px 8px;
+    border-radius:8px;
+    font-size:13px;
+    margin-top:14px;
+    border:rgb(161, 159, 159);
+    cursor:pointer;
+    background:#f1c1b3;
+}
+div.contato form input[type=text],textarea:focus{
+    outline:none;
+}
+
+
+footer{
+    padding:20px 0;
+    text-align:center;
+
+    background:#ff3d00;
+    color:#dfb5a9;
+    width:100%;
+}
